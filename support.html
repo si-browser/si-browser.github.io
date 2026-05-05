@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support - Si Browser</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500&display=swap');
+  :root {
+    --pink: #F0276A; --black: #080808; --surface: #111111;
+    --border: rgba(255,255,255,0.07); --text-muted: rgba(255,255,255,0.5);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--black); color: #fff; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.7; }
+  nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 18px 64px; background: rgba(8,8,8,0.9); backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); }
+  .logo { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+  .logo-mark { width: 34px; height: 34px; border-radius: 9px; background: linear-gradient(135deg, var(--pink), #C01550); display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 18px; color: #fff; }
+  .logo-name { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 17px; color: #fff; }
+  .content { max-width: 720px; margin: 0 auto; padding: 140px 40px 100px; }
+  .page-label { font-size: 12px; color: var(--pink); letter-spacing: 0.14em; text-transform: uppercase; margin-bottom: 14px; }
+  h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 44px; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .subtitle { font-size: 17px; color: var(--text-muted); margin-bottom: 56px; padding-bottom: 32px; border-bottom: 1px solid var(--border); }
+  h2 { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 20px; margin: 40px 0 14px; }
+  p { font-size: 15px; color: rgba(255,255,255,0.65); margin-bottom: 16px; }
+  ul { margin: 0 0 16px 20px; }
+  ul li { font-size: 15px; color: rgba(255,255,255,0.65); margin-bottom: 8px; }
+  a { color: var(--pink); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .highlight { background: rgba(240,39,106,0.08); border: 1px solid rgba(240,39,106,0.2); border-radius: 12px; padding: 20px 24px; margin: 24px 0; }
+  .highlight p { margin: 0; color: rgba(255,255,255,0.75); }
+  .faq-item { border: 1px solid var(--border); border-radius: 12px; margin-bottom: 12px; overflow: hidden; }
+  .faq-q { padding: 18px 20px; font-size: 15px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: background 0.2s; }
+  .faq-q:hover { background: rgba(255,255,255,0.03); }
+  .faq-q .arrow { font-size: 12px; color: var(--text-muted); transition: transform 0.2s; }
+  .faq-item.open .arrow { transform: rotate(90deg); }
+  .faq-a { display: none; padding: 0 20px 18px; font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; border-top: 1px solid var(--border); padding-top: 16px; }
+  .faq-item.open .faq-a { display: block; }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 20px; }
+  .contact-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; text-decoration: none; transition: all 0.2s; display: block; }
+  .contact-card:hover { border-color: rgba(240,39,106,0.3); background: rgba(240,39,106,0.05); transform: translateY(-2px); text-decoration: none; }
+  .contact-icon { font-size: 24px; margin-bottom: 12px; }
+  .contact-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: #fff; margin-bottom: 6px; }
+  .contact-desc { font-size: 13px; color: var(--text-muted); }
+  footer { border-top: 1px solid var(--border); padding: 32px 64px; display: flex; align-items: center; justify-content: space-between; }
+  .footer-logo { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 15px; color: rgba(255,255,255,0.25); }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { font-size: 13px; color: rgba(255,255,255,0.25); text-decoration: none; }
+  .footer-links a:hover { color: rgba(255,255,255,0.6); }
+  @media (max-width: 768px) {
+    nav { padding: 16px 20px; }
+    .content { padding: 100px 20px 80px; }
+    h1 { font-size: 32px; }
+    .contact-grid { grid-template-columns: 1fr; }
+    footer { padding: 28px 20px; flex-direction: column; gap: 16px; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-mark">S</div>
+    <span class="logo-name">Si Browser</span>
+  </a>
+</nav>
+
+<div class="content">
+  <p class="page-label">Help</p>
+  <h1>Support</h1>
+  <p class="subtitle">Find answers to common questions or get in touch with us directly.</p>
+
+  <h2>Frequently Asked Questions</h2>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">How do I install Si Browser? <span class="arrow">▶</span></div>
+    <div class="faq-a">You can install Si Browser from Google Play, APKPure, or by downloading the APK directly from GitHub Releases. If installing from APK, enable "Install from unknown sources" in your Android settings.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">How does the video detection work? <span class="arrow">▶</span></div>
+    <div class="faq-a">Si Browser automatically detects video URLs on webpages using a built-in browser extension. When a video is found, a floating button appears. Tap it to open the video list, then tap Play to launch the native full-screen player.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">Why can't I play some videos? <span class="arrow">▶</span></div>
+    <div class="faq-a">Some videos are protected by DRM (Digital Rights Management) or require specific authentication tokens. These videos may not be playable in the native player. Try watching them directly in the browser instead.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">How do I install Firefox extensions? <span class="arrow">▶</span></div>
+    <div class="faq-a">Go to the browser menu → Add-ons → tap the settings icon → Enable "Install extensions from unknown sources". You can then install any Firefox-compatible extension from addons.mozilla.org.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">Is the ad blocker enabled by default? <span class="arrow">▶</span></div>
+    <div class="faq-a">Yes, uBlock Origin is pre-installed and active by default. You can manage its settings from the Extensions menu in the browser.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">Does Si Browser collect my data? <span class="arrow">▶</span></div>
+    <div class="faq-a">No. Si Browser does not collect telemetry, browsing history, or any personal data. All your data stays on your device. See our Privacy Policy for full details.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">How do I report a bug? <span class="arrow">▶</span></div>
+    <div class="faq-a">You can report bugs by emailing us at applogcat@gmail.com or by opening an issue on our GitHub repository. Please include your Android version, device model, and steps to reproduce the issue.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q" onclick="toggle(this)">How do I update Si Browser? <span class="arrow">▶</span></div>
+    <div class="faq-a">If installed from Google Play, updates are delivered automatically. If installed via APK, download the latest version from our GitHub Releases page and install it over the existing app.</div>
+  </div>
+
+  <h2>Get in Touch</h2>
+  <p>Can't find what you're looking for? Contact us directly.</p>
+  <div class="contact-grid">
+    <a href="mailto:applogcat@gmail.com" class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-title">Email Support</div>
+      <div class="contact-desc">applogcat@gmail.com<br>We respond within 48 hours</div>
+    </a>
+    <a href="https://play.google.com/store/apps/details?id=com.ipankstudio.lk25" class="contact-card">
+      <div class="contact-icon">⭐</div>
+      <div class="contact-title">Leave a Review</div>
+      <div class="contact-desc">Share your feedback on Google Play</div>
+    </a>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">Si Browser © 2026</div>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+  </div>
+</footer>
+
+<script>
+  function toggle(el) {
+    el.parentElement.classList.toggle('open');
+  }
+</script>
+</body>
+</html>
