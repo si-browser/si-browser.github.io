@@ -118,6 +118,24 @@
     font-size: 13px; color: rgba(255,255,255,0.75);
   }
 
+  .language-nav {
+    display: flex; gap: 10px; margin: 20px 0 36px;
+  }
+
+  .language-nav a {
+    border: 1px solid rgba(240,39,106,0.35);
+    border-radius: 999px; padding: 6px 14px; font-size: 13px;
+  }
+
+  .policy-section {
+    scroll-margin-top: 92px;
+  }
+
+  .language-divider {
+    border: 0; border-top: 1px solid var(--border);
+    margin: 72px 0 56px;
+  }
+
   footer {
     border-top: 1px solid var(--border);
     padding: 32px 64px;
@@ -156,81 +174,118 @@
 <div class="content">
   <p class="page-label">Legal</p>
   <h1>Privacy Policy</h1>
-  <p class="last-updated">Last updated: May 5, 2026</p>
+  <p class="last-updated">隐私政策 · Last updated: September 2, 2026</p>
 
   <div class="highlight">
-    <p>Si Browser is built with privacy as a core principle. We collect minimal data and never sell or share your personal information with third parties.</p>
+    <p>Si Browser adopts a local-first approach. Browser history, bookmarks and game progress stay under your control, while clearly identified Google services may process limited data to provide configuration, consent and advertising features.</p>
   </div>
 
   <div class="badge-row">
-    <span class="badge">✓ No Telemetry</span>
-    <span class="badge">✓ No Tracking</span>
-    <span class="badge">✓ No Ads</span>
-    <span class="badge">✓ No Data Selling</span>
+    <span class="badge">✓ Local-first</span>
+    <span class="badge">✓ User controlled</span>
+    <span class="badge">✓ No sale of browsing history</span>
   </div>
 
-  <h2>1. Introduction</h2>
-  <p>This Privacy Policy describes how Si Browser ("we", "our", or "the App") handles information when you use our Android browser application. By using Si Browser, you agree to the practices described in this policy.</p>
+  <div class="language-nav">
+    <a href="#zh-cn">简体中文</a>
+    <a href="#english">English</a>
+  </div>
 
-  <h2>2. Information We Do NOT Collect</h2>
-  <p>Si Browser is designed to protect your privacy. We do not collect:</p>
-  <ul>
-    <li>Browsing history or visited URLs</li>
-    <li>Search queries</li>
-    <li>Personal identification information</li>
-    <li>Location data</li>
-    <li>Device identifiers for tracking purposes</li>
-    <li>Cookies or tracking data from websites you visit</li>
-    <li>Usage statistics or analytics</li>
-    <li>Crash reports sent to our servers</li>
-  </ul>
+  <section id="zh-cn" class="policy-section" lang="zh-CN">
+    <h2>1. 适用范围</h2>
+    <p>本隐私政策说明 Si Browser（以下简称“本应用”）在提供 Android 浏览器、下载、媒体播放及游戏中心功能时如何处理信息。不同发行渠道的功能可能有所不同；Google Play（GP）版本的游戏中心包含 Google 广告服务。</p>
 
-  <h2>3. Data Stored Locally</h2>
-  <p>The following data is stored only on your device and never transmitted to our servers:</p>
-  <ul>
-    <li>Browser history and bookmarks</li>
-    <li>Saved passwords (encrypted)</li>
-    <li>Browser preferences and settings</li>
-    <li>Downloaded files</li>
-    <li>Website cookies and local storage</li>
-    <li>Video playback history</li>
-  </ul>
+    <h2>2. 本地保存的数据</h2>
+    <p>以下数据主要保存在您的设备上，由您管理：</p>
+    <ul>
+      <li>浏览历史、书签、快捷网站和标签页状态；</li>
+      <li>浏览器设置、网站权限选择、Cookie 及网站本地存储；</li>
+      <li>下载记录和您下载的文件；</li>
+      <li>视频播放状态；</li>
+      <li>游戏进度、游戏币、收藏和最近游玩记录。</li>
+    </ul>
+    <p>您可以在应用或 Android 系统设置中清除这些数据，卸载应用通常也会删除应用内部数据。若您启用了 Android 云备份或设备迁移，专用的游戏存档副本可能由 Android 备份服务传输并保存到您的云账户，以便恢复游戏进度；该过程受您的设备和账户备份设置控制。</p>
 
-  <h2>4. Firefox-Based Features</h2>
-  <p>Si Browser is based on Firefox for Android (iceraven-browser). We have disabled the following Firefox features to protect your privacy:</p>
-  <ul>
-    <li>Mozilla telemetry and crash reporting</li>
-    <li>Firefox experiments and A/B testing (Nimbus)</li>
-    <li>Sponsored content and recommendations</li>
-    <li>Firefox Suggest data collection</li>
-    <li>MediaSession reporting</li>
-  </ul>
+    <h2>3. 浏览网页与第三方网站</h2>
+    <p>本应用使用 Android System WebView 加载您选择访问的网页。与其他浏览器一样，网页请求会向目标网站、搜索服务、内容分发网络及其服务商提供完成连接所需的信息，例如 IP 地址、请求内容、浏览器信息和 Cookie。第三方网站可能按照其自己的隐私政策收集或使用信息，本应用无法控制其行为。</p>
+    <p>浏览历史和搜索记录不会作为用户资料上传至 Si Browser 运营者的服务器，也不会由我们出售。内置广告拦截和视频检测主要在设备本地处理；但当您实际打开网页或媒体资源时，相关网络服务仍会收到必要的网络请求。</p>
 
-  <h2>5. Built-in Ad Blocker</h2>
-  <p>Si Browser includes uBlock Origin to block ads and trackers. This feature operates entirely on your device. No data about blocked content is sent to us or any third party.</p>
+    <h2>4. Google Mobile Ads 与 UMP（仅 GP 版）</h2>
+    <p>GP 版本在游戏中心使用 Google AdMob 展示插屏广告和激励广告，并使用 Google User Messaging Platform（UMP）收集和保存适用地区的广告隐私选择。根据用户选择、地区和广告可用性，广告可能是个性化、非个性化或受限广告。</p>
+    <p>Google Mobile Ads SDK 可能自动收集或共享 IP 地址（可用于估算大致位置）、应用和广告交互（例如启动、点击和视频观看）、诊断信息，以及广告 ID、App Set ID 等设备或账户标识符，用于广告投放、效果衡量、分析及防欺诈。相关数据通过传输加密发送。Si Browser 不会把您的浏览历史或访问网址提供给 AdMob 用于广告定向。</p>
+    <p>您可以通过游戏中心菜单中的“广告隐私设置”重新查看适用的选择，也可以在 Android 系统设置中管理广告 ID。有关 Google 如何处理合作伙伴应用中的信息，请参阅 <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">Google 的合作伙伴网站和应用数据说明</a>及 <a href="https://policies.google.com/privacy" rel="noopener">Google 隐私权政策</a>。</p>
 
-  <h2>6. Video Detection Feature</h2>
-  <p>The smart video detection feature processes webpage content locally on your device to identify video URLs. This processing happens entirely on-device and no video URLs or webpage data are transmitted to our servers.</p>
+    <h2>5. Firebase Remote Config</h2>
+    <p>本应用使用 Firebase Remote Config 获取功能开关、更新信息、导航配置和内容源配置。该服务可能处理应用实例标识符、应用版本、设备和连接相关信息及配置请求所需的诊断数据。本应用不会通过 Remote Config 上传您的浏览历史、搜索词或网页内容。该服务由 Google 按其隐私政策处理。</p>
 
-  <h2>7. Third-Party Services</h2>
-  <p>When you browse the web using Si Browser, you may interact with third-party websites and services. These third parties have their own privacy policies which we do not control. We recommend reviewing the privacy policies of websites you visit.</p>
-  <p>If you download the App from Google Play or APKPure, those platforms may collect data according to their own privacy policies.</p>
+    <h2>6. 扫码、下载与设备权限</h2>
+    <p>扫码仅在您主动使用该功能时启动，扫描结果用于执行您选择的操作。下载功能会在您授权后保存文件，并可能使用通知和前台服务显示下载进度。位置权限仅在网页提出请求且您明确允许时提供给该网页。为打开外部协议链接，本应用可能检查设备上是否有可处理该链接的应用；不会据此建立或出售已安装应用列表。</p>
 
-  <h2>8. Extensions</h2>
-  <p>Si Browser supports Firefox extensions. Extensions installed by you may collect data according to their own privacy policies. We are not responsible for data collected by third-party extensions.</p>
+    <h2>7. 游戏中心</h2>
+    <p>内置离线游戏在隔离的 WebView 环境中运行。游戏进度主要保存在设备本地，部分存档可按第 2 节所述参与 Android 备份。需要联网的未来游戏或内容会在游戏详情中另行说明；第三方游戏开发者或服务提供商应提供其自己的隐私声明。</p>
 
-  <h2>9. Children's Privacy</h2>
-  <p>Si Browser is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided personal information, please contact us.</p>
+    <h2>8. 我们直接收到的信息</h2>
+    <p>本应用目前不要求创建 Si Browser 账户。只有当您主动发送支持邮件时，我们才会收到您选择提供的邮箱地址、邮件内容和附件，并将其用于回复和解决问题。我们不会出售您的浏览历史或支持邮件内容。</p>
 
-  <h2>10. Security</h2>
-  <p>We take reasonable measures to protect information stored on your device. However, no method of electronic storage is 100% secure. We recommend keeping your device and the App updated.</p>
+    <h2>9. 数据保留与安全</h2>
+    <p>本地数据会保留至您清除数据或卸载应用。由 Google、应用商店、网站或其他第三方处理的数据，按照相应服务商的保留政策处理。我们采取合理措施保护应用内数据和网络传输，但任何电子存储或传输方式均无法保证绝对安全。</p>
 
-  <h2>11. Changes to This Policy</h2>
-  <p>We may update this Privacy Policy from time to time. We will update the "Last updated" date at the top of this page. Continued use of the App after changes constitutes acceptance of the updated policy.</p>
+    <h2>10. 儿童隐私</h2>
+    <p>本应用并非专门面向 13 岁以下儿童。我们不会有意直接收集儿童的个人资料。如果您认为儿童向我们发送了个人信息，请通过下方联系方式联系我们。</p>
 
-  <h2>12. Contact Us</h2>
-  <p>If you have any questions or concerns about this Privacy Policy, please contact us at:</p>
-  <p><a href="mailto:applogcat@gmail.com">applogcat@gmail.com</a></p>
+    <h2>11. 政策变更与联系</h2>
+    <p>功能、第三方 SDK 或法律要求发生变化时，我们可能更新本政策，并在页面顶部更新日期。如对本政策或数据处理有疑问，或希望删除您通过支持邮件提供的信息，请联系：</p>
+    <p><a href="mailto:applogcat@gmail.com">applogcat@gmail.com</a></p>
+  </section>
+
+  <hr class="language-divider">
+
+  <section id="english" class="policy-section" lang="en">
+    <h2>1. Scope</h2>
+    <p>This Privacy Policy explains how Si Browser (the “App”) handles information while providing its Android browser, download, media playback, and game center features. Features may differ by distribution channel. The Google Play (“GP”) version includes Google advertising services in the game center.</p>
+
+    <h2>2. Data stored locally</h2>
+    <p>The following data is primarily stored on your device and remains under your control:</p>
+    <ul>
+      <li>Browsing history, bookmarks, quick sites, and tab state;</li>
+      <li>Browser settings, website permission choices, cookies, and website local storage;</li>
+      <li>Download records and files you download;</li>
+      <li>Video playback state; and</li>
+      <li>Game progress, game coins, favorites, and recently played games.</li>
+    </ul>
+    <p>You can clear this data in the App or Android settings, and uninstalling the App normally removes its internal data. If Android cloud backup or device transfer is enabled, a dedicated copy of game save data may be transferred to and stored in your cloud account by Android's backup service so that progress can be restored. This is controlled by your device and account backup settings.</p>
+
+    <h2>3. Web browsing and third-party websites</h2>
+    <p>The App uses Android System WebView to load pages you choose to visit. As with other browsers, web requests provide destination websites, search services, content delivery networks, and their providers with information needed to make the connection, such as your IP address, request content, browser information, and cookies. Third-party websites may handle information under their own privacy policies, which we do not control.</p>
+    <p>Browsing history and search records are not uploaded to the Si Browser operator as user profiles and are not sold by us. Built-in ad blocking and video detection primarily operate on-device. When you open a page or media resource, however, the relevant network services still receive the necessary requests.</p>
+
+    <h2>4. Google Mobile Ads and UMP (GP version only)</h2>
+    <p>The GP version uses Google AdMob to show interstitial and rewarded ads in the game center and uses Google User Messaging Platform (“UMP”) to collect and store applicable advertising privacy choices. Depending on your choices, region, and availability, ads may be personalized, non-personalized, or limited.</p>
+    <p>The Google Mobile Ads SDK may automatically collect or share IP address (which may estimate general location), app and ad interactions such as launches, taps, and video views, diagnostic information, and device or account identifiers such as the advertising ID and App Set ID. Google uses this information for ad delivery, measurement, analytics, and fraud prevention, and encrypts it in transit. Si Browser does not provide your browsing history or visited URLs to AdMob for ad targeting.</p>
+    <p>You can revisit applicable choices through “Ad privacy settings” in the game center menu and manage your advertising ID in Android settings. Learn more in <a href="https://policies.google.com/technologies/partner-sites" rel="noopener">How Google uses information from partner sites and apps</a> and the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>.</p>
+
+    <h2>5. Firebase Remote Config</h2>
+    <p>The App uses Firebase Remote Config for feature switches, update information, navigation configuration, and content-source configuration. The service may process app instance identifiers, app version, device and connection information, and diagnostics needed for configuration requests. The App does not send your browsing history, search terms, or page content through Remote Config. Google processes this service data under its privacy policy.</p>
+
+    <h2>6. Scanning, downloads, and device permissions</h2>
+    <p>Code scanning starts only when you request it, and the result is used for the action you choose. Downloads save files at your request and may use notifications and a foreground service to show progress. Location is provided to a website only when that website requests it and you grant permission. To open external links, the App may check whether an installed app can handle the link; it does not use this capability to build or sell an installed-app profile.</p>
+
+    <h2>7. Game center</h2>
+    <p>Bundled offline games run in an isolated WebView environment. Game progress is primarily stored locally, with selected save data eligible for Android backup as described in Section 2. Future games or content that require a network connection will be identified in their details. Third-party game developers or service providers should provide their own privacy notices.</p>
+
+    <h2>8. Information you send directly</h2>
+    <p>The App currently does not require a Si Browser account. If you contact support, we receive the email address, message, and attachments you choose to provide and use them to respond and resolve the issue. We do not sell browsing history or support message contents.</p>
+
+    <h2>9. Retention and security</h2>
+    <p>Local data remains until you clear it or uninstall the App. Data handled by Google, an app store, a website, or another third party is retained according to that provider's policy. We take reasonable measures to protect in-app data and network transmission, but no electronic storage or transmission method is completely secure.</p>
+
+    <h2>10. Children's privacy</h2>
+    <p>The App is not specifically directed to children under 13, and we do not knowingly collect children's personal information directly. If you believe a child has sent personal information to us, please contact us below.</p>
+
+    <h2>11. Changes and contact</h2>
+    <p>We may update this policy when features, third-party SDKs, or legal requirements change and will revise the date at the top. For questions about this policy or data handling, or to request deletion of information you sent through support email, contact:</p>
+    <p><a href="mailto:applogcat@gmail.com">applogcat@gmail.com</a></p>
+  </section>
 
 </div>
 
