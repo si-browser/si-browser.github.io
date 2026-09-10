@@ -56,14 +56,6 @@ h1 em { color: var(--green); font-style: normal; }
 .phone img { display: block; width: 100%; height: auto; }
 .phone-front { position: absolute; width: 268px; top: 0; left: 120px; transform: rotate(2deg); z-index: 2; }
 .phone-back { position: absolute; width: 232px; top: 96px; left: 10px; transform: rotate(-8deg); opacity: .76; }
-.float-card { position: absolute; z-index: 3; display: flex; align-items: center; gap: 11px; min-width: 182px; padding: 12px 15px; border: 1px solid rgba(255, 255, 255, .15); border-radius: 15px; background: rgba(20, 20, 25, .87); box-shadow: 0 18px 46px rgba(0, 0, 0, .36); backdrop-filter: blur(18px); }
-.float-card strong { display: block; }
-.float-card > span:last-child { color: var(--muted); font-size: .76rem; line-height: 1.35; }
-.float-card strong { color: #fff; font-size: .84rem; }
-.float-icon { flex: 0 0 34px; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: rgba(37, 211, 102, .15); color: var(--green); font-weight: 800; }
-.float-card-one { left: 0; top: 64px; }
-.float-card-two { right: 0; bottom: 70px; }
-.share-icon svg { width: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; }
 .trust-strip { border-block: 1px solid var(--line); background: #0d0d10; padding: 26px max(20px, calc((100% - var(--max)) / 2)); display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .trust-strip p { margin: 0; color: #fff; font-weight: 700; }
 .trust-strip div { display: flex; gap: 24px; flex-wrap: wrap; justify-content: flex-end; }
@@ -153,8 +145,6 @@ footer { width: min(calc(100% - 40px), var(--max)); margin: 0 auto; padding: 45p
   .hero-visual { min-height: 500px; transform: scale(.92); transform-origin: top center; margin-bottom: -40px; }
   .phone-front { width: 238px; left: 82px; }
   .phone-back { width: 198px; left: -5px; top: 92px; }
-  .float-card-one { left: -4px; top: 50px; }
-  .float-card-two { right: -6px; bottom: 42px; }
   .trust-strip { align-items: flex-start; flex-direction: column; }
   .trust-strip div { justify-content: flex-start; gap: 12px 20px; }
   .section { width: min(calc(100% - 32px), var(--max)); padding: 84px 0; }
