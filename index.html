@@ -62,6 +62,10 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
             <span data-copy-label>Copy link</span>
           </button>
+          <button class="share-button share-more" type="button" data-native-share aria-label="Share SiBrowser using another app">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg>
+            <span data-share-label>More apps</span>
+          </button>
         </div>
       </div>
 
@@ -181,14 +185,18 @@
   </footer>
   <script>
     const copyButton = document.querySelector('[data-copy-link]');
+    const nativeShareButton = document.querySelector('[data-native-share]');
     const copyUrl = 'https://browser.beasonapps.com/';
+    const shareData = {
+      title: 'SiBrowser',
+      text: 'Use WhatsApp Web on Android with up to 5 accounts using SiBrowser.',
+      url: copyUrl
+    };
 
-    copyButton.addEventListener('click', async () => {
-      let copied = false;
-
+    async function copyWebsiteLink() {
       try {
         await navigator.clipboard.writeText(copyUrl);
-        copied = true;
+        return true;
       } catch (error) {
         const textArea = document.createElement('textarea');
         textArea.value = copyUrl;
@@ -197,9 +205,14 @@
         textArea.style.opacity = '0';
         document.body.appendChild(textArea);
         textArea.select();
-        copied = document.execCommand('copy');
+        const copied = document.execCommand('copy');
         textArea.remove();
+        return copied;
       }
+    }
+
+    copyButton.addEventListener('click', async () => {
+      const copied = await copyWebsiteLink();
 
       if (!copied) {
         window.prompt('Copy this link:', copyUrl);
@@ -209,6 +222,23 @@
       const label = copyButton.querySelector('[data-copy-label]');
       label.textContent = 'Copied!';
       setTimeout(() => { label.textContent = 'Copy link'; }, 1800);
+    });
+
+    nativeShareButton.addEventListener('click', async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share(shareData);
+          return;
+        } catch (error) {
+          if (error.name === 'AbortError') return;
+        }
+      }
+
+      const copied = await copyWebsiteLink();
+      const label = nativeShareButton.querySelector('[data-share-label]');
+      label.textContent = copied ? 'Link copied!' : 'Copy manually';
+      if (!copied) window.prompt('Copy this link:', copyUrl);
+      setTimeout(() => { label.textContent = 'More apps'; }, 1800);
     });
   </script>
 </body>
