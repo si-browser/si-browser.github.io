@@ -44,7 +44,7 @@ h1 em { color: var(--green); font-style: normal; }
 .hero-points span { border: 1px solid var(--line); border-radius: 999px; padding: 6px 11px; color: var(--muted); font-size: .8rem; }
 .share-row { margin-top: 24px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .share-row > span { margin-right: 3px; color: #777783; font-size: .78rem; font-weight: 680; }
-.share-button { min-height: 38px; padding: 7px 12px; display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); border-radius: 10px; color: #dedee4; background: rgba(255, 255, 255, .035); text-decoration: none; font-size: .78rem; font-weight: 720; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
+.share-button { min-height: 38px; padding: 7px 12px; display: inline-flex; align-items: center; gap: 7px; border: 1px solid var(--line); border-radius: 10px; color: #dedee4; background: rgba(255, 255, 255, .035); text-decoration: none; font: inherit; font-size: .78rem; font-weight: 720; cursor: pointer; transition: transform .2s ease, background .2s ease, border-color .2s ease; }
 .share-button:hover { transform: translateY(-2px); background: rgba(255, 255, 255, .08); border-color: rgba(255, 255, 255, .2); }
 .share-button svg { width: 17px; height: 17px; fill: var(--green); }
 .share-mark { width: 17px; height: 17px; display: grid; place-items: center; color: #fff; font-size: .75rem; font-weight: 850; }
@@ -56,6 +56,7 @@ h1 em { color: var(--green); font-style: normal; }
 .share-telegram { color: #c6ebff; border-color: rgba(39, 167, 231, .28); background: rgba(39, 167, 231, .09); }
 .share-telegram svg { fill: #42b5eb; }
 .share-telegram:hover { background: rgba(39, 167, 231, .16); border-color: rgba(66, 181, 235, .44); }
+.share-copy svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
 .hero-visual { min-height: 590px; position: relative; }
 .halo { position: absolute; width: 520px; height: 520px; border-radius: 50%; top: 40px; left: 20px; background: radial-gradient(circle, rgba(37, 211, 102, .16), rgba(255, 51, 118, .08) 48%, transparent 70%); filter: blur(10px); }
 .phone { position: relative; overflow: hidden; border: 7px solid #2d2d34; border-radius: 37px; background: #eef0f4; box-shadow: 0 35px 80px rgba(0, 0, 0, .48); }

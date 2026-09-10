@@ -58,6 +58,10 @@
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.9 2.3 20.3 21c-.3 1.3-1 1.6-2.1 1l-5.5-4.1-2.7 2.6c-.3.3-.5.5-1.1.5l.4-5.6L19.5 6c.4-.4-.1-.6-.7-.2L6.2 13.7.8 12c-1.2-.4-1.2-1.2.2-1.7L22.1 2c1-.4 1.8.2 1.8.3Z"/></svg>
             Share on Telegram
           </a>
+          <button class="share-button share-copy" type="button" data-copy-link aria-label="Copy the SiBrowser website link">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></svg>
+            <span data-copy-label>Copy link</span>
+          </button>
         </div>
       </div>
 
@@ -175,5 +179,37 @@
     <p class="legal">SiBrowser is independently developed and is not affiliated with, sponsored by, or endorsed by WhatsApp LLC or Meta Platforms, Inc. WhatsApp is a trademark of its respective owner. Web Scanner uses the official WhatsApp Web service, whose availability depends on that service.</p>
     <p class="copyright">© 2026 SiBrowser. All rights reserved.</p>
   </footer>
+  <script>
+    const copyButton = document.querySelector('[data-copy-link]');
+    const copyUrl = 'https://browser.beasonapps.com/';
+
+    copyButton.addEventListener('click', async () => {
+      let copied = false;
+
+      try {
+        await navigator.clipboard.writeText(copyUrl);
+        copied = true;
+      } catch (error) {
+        const textArea = document.createElement('textarea');
+        textArea.value = copyUrl;
+        textArea.setAttribute('readonly', '');
+        textArea.style.position = 'fixed';
+        textArea.style.opacity = '0';
+        document.body.appendChild(textArea);
+        textArea.select();
+        copied = document.execCommand('copy');
+        textArea.remove();
+      }
+
+      if (!copied) {
+        window.prompt('Copy this link:', copyUrl);
+        return;
+      }
+
+      const label = copyButton.querySelector('[data-copy-label]');
+      label.textContent = 'Copied!';
+      setTimeout(() => { label.textContent = 'Copy link'; }, 1800);
+    });
+  </script>
 </body>
 </html>
