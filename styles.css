@@ -101,10 +101,7 @@ h1 em { color: var(--green); font-style: normal; }
 .apps-heading { display: grid; grid-template-columns: 1fr minmax(320px, .62fr); align-items: end; gap: 54px; }
 .apps-heading h2 { margin: 0; max-width: 660px; font-size: clamp(2.25rem, 4.5vw, 4.2rem); }
 .apps-heading > div:last-child > p { margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.75; }
-.apps-all { margin-top: 18px; display: inline-flex; align-items: center; gap: 8px; color: var(--green); text-decoration: none; font-size: .9rem; font-weight: 700; }
-.apps-all span { transition: transform .16s ease; }
-.apps-all:hover span { transform: translateX(3px); }
-.app-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.app-grid { margin-top: 48px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
 .app-card { min-height: 330px; padding: 26px; display: flex; flex-direction: column; align-items: flex-start; position: relative; overflow: hidden; border: 1px solid rgba(255, 255, 255, .09); border-radius: 28px; background: radial-gradient(circle at 92% 4%, rgba(255, 255, 255, .08), transparent 12rem), linear-gradient(150deg, rgba(36, 36, 44, .92), rgba(17, 17, 22, .96)); box-shadow: inset 0 1px rgba(255, 255, 255, .025); transition: transform .18s ease, border-color .18s ease; }
 .app-card:hover { transform: translateY(-4px); border-color: rgba(255, 255, 255, .18); }
 .app-card > img { width: 68px; height: 68px; object-fit: cover; border-radius: 19px; box-shadow: 0 16px 34px rgba(0, 0, 0, .28); }
@@ -114,7 +111,6 @@ h1 em { color: var(--green); font-style: normal; }
 .app-card > a { width: 100%; min-height: 44px; margin-top: auto; padding-top: 22px; display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #e6e6ec; text-decoration: none; font-size: .84rem; font-weight: 680; }
 .app-card > a::before { content: ""; height: 1px; position: absolute; left: 26px; right: 26px; bottom: 57px; background: rgba(255, 255, 255, .08); }
 .app-phantom { background: radial-gradient(circle at 92% 4%, rgba(255, 97, 48, .18), transparent 13rem), linear-gradient(150deg, rgba(53, 42, 68, .85), rgba(14, 20, 39, .92)); }
-.app-moonwave { background: radial-gradient(circle at 92% 4%, rgba(48, 145, 255, .18), transparent 13rem), linear-gradient(150deg, rgba(18, 51, 83, .86), rgba(7, 21, 41, .92)); }
 .app-inkpdf { background: radial-gradient(circle at 92% 4%, rgba(255, 188, 76, .15), transparent 13rem), linear-gradient(150deg, rgba(48, 48, 65, .86), rgba(12, 21, 39, .92)); }
 .download-section { padding: 50px 20px 120px; }
 .download-inner { max-width: 900px; margin: 0 auto; padding: 72px 50px; border: 1px solid rgba(255, 51, 118, .24); border-radius: 32px; text-align: center; background: radial-gradient(circle at 50% 0, rgba(255, 51, 118, .2), transparent 48%), var(--surface); }
